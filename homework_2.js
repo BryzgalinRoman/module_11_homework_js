@@ -3,7 +3,7 @@
 
 function IsPrime(num) {
     let flag = 0;
-    if (num > 1000) {
+    if (num > 1000 || isNaN(num)) {   
         console.log(`Данные неверны`);
     } else if (num == 0 || num == 1) {
         console.log(`Число ${num} не является ни простым, ни составным`);

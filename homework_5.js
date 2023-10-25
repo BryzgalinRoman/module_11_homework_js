@@ -5,13 +5,13 @@
 
 //Протестируйте функцию на любых значениях и выведите результат в консоль.
 
-const pow = (x, n) => {
-    let res = x;
-    for (let i = 1; i < n; i++) {
-        res = res * x;
-    }
-    return res;
-    // return Math.pow(x, n);
+const getNumberPower = (x, n) => {  //стрелочная функция с двумя параметрами
+    let result = x; //объявление переменной result с определением переменной X
+    for (let i = 1; i < n; i++) {  //цикл for, начало от 1, условие, шаг увеличения на 1
+        result = result * x; // выполняем действие N количество раз, т.к. условие цикла i < n
+    }  //цикл завершился
+    return result; //возвращаем значение функции
+
 }
 
-console.log(pow(2, 6));
+console.log(getNumberPower(2, 3));  //аргументы 2 и 3 для X и N

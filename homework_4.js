@@ -4,12 +4,12 @@
 //Например, пользователь ввёл числа 5 и 15. 
 //Каждую секунду в консоль должно печататься число, начиная с 5 и заканчивая 15 (всего 11 чисел: 5 6 7 8 9 10 11 12 13 14 15).
 
-function naturalNumRowPrint(a, b){
-    const intervalID = setInterval ( function () {
-      console.log(a);
-      a++;
-      if (a > b) clearInterval(intervalID);
+function showNumbersInRange(a, b){  //принимает два числа, функция с двумя параметрами, функция высшего порядка
+    const intervalID = setInterval ( function () { //внутренняя функция
+      console.log(a); //выводи А
+      a++; //увеличивает А на 1
+      if (a > b) clearInterval(intervalID); //если А станет больше Б заверши операцию
       }, 1000);
     } 
     
-    naturalNumRowPrint(5, 15);
+    showNumbersInRange(5, 15);  //выполняет функцию
